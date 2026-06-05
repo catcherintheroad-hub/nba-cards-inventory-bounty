@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/nba-cards-inventory-bounty/static/css/main.361ae082.css",
+    "main.js": "/nba-cards-inventory-bounty/static/js/main.d894b59b.js",
+    "index.html": "/nba-cards-inventory-bounty/index.html",
+    "main.361ae082.css.map": "/nba-cards-inventory-bounty/static/css/main.361ae082.css.map",
+    "main.d894b59b.js.map": "/nba-cards-inventory-bounty/static/js/main.d894b59b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.361ae082.css",
+    "static/js/main.d894b59b.js"
+  ]
+}
