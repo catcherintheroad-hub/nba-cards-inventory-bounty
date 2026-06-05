@@ -257,7 +257,7 @@ function CollectionPage() {
         }
 
         tableInstanceRef.current.setFilter('playerName', 'like', globalSearch.trim());
-    }, [globalSearch]);
+    }, [globalSearch, isTabulatorReady, tableData]);
 
     // Handle form submit to update card
     const handleFormSubmit = async (e) => {
