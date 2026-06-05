@@ -86,4 +86,15 @@ describe('CollectionPage Tabulator dashboard', () => {
     expect(instances[1].options.data).toHaveLength(3);
     expect(instances[1].setFilter).toHaveBeenCalledWith('playerName', 'like', 'Jordan');
   });
+
+  it('sorts ISO acquired dates without relying on Tabulator date plugins', () => {
+    render(<CollectionPage />);
+
+    const dateColumn = instances[0].options.columns.find((column) => column.field === 'acquiredDate');
+
+    expect(typeof dateColumn.sorter).toBe('function');
+    expect(dateColumn.sorter('2026-06-05', '2026-01-01')).toBeGreaterThan(0);
+    expect(dateColumn.sorter('2025-12-31', '2026-01-01')).toBeLessThan(0);
+    expect(dateColumn.sorter('', '2026-01-01')).toBeLessThan(0);
+  });
 });

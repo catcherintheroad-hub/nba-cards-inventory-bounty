@@ -67,6 +67,10 @@ function escapeHtml(value) {
     }[character]));
 }
 
+function sortIsoDateStrings(leftDate, rightDate) {
+    return String(leftDate || '').localeCompare(String(rightDate || ''));
+}
+
 function normalizeCard(card) {
     const grade = card.grade === null || card.grade === undefined || card.grade === ''
         ? null
@@ -213,7 +217,7 @@ function CollectionPage() {
                     title: 'Date',
                     field: 'acquiredDate',
                     width: 128,
-                    sorter: 'date',
+                    sorter: sortIsoDateStrings,
                 },
                 {
                     title: 'Actions',
